@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fill details</title>
+  <link rel="stylesheet" href="style2.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <!-- main container -->
+  <div class="container">
+    <form action="post.php">
+     <!-- date -->
+     
+     
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date">
+      
+      
+      
+      <!-- physics details -->
+      <label for="physics">physics</label>
+      <textarea id="physics" name="subject" placeholder="Write here today's targeted study of physics..." style="height:200px"></textarea>
+      
+      
+      
+      <label for="TodayFor">Physics study type</label>
+      <select id="Todayforphy" name="country">
+        <option value="MCQ">MCQ</option>
+        <option value="learn/revise">Learn/revise</option>
+        <option value="Both">Both</option>
+      </select>
+      
+      <label for="appt">Time From</label>
+      <input type="time" id="timefromphy" name="timefromphy">
+      <label for="appt">time To</label>
+      <input type="time" id="timetophy" name="timetophy">
+     
+     
+     
+     
+      
+      <!-- chemistry details -->
+     
+     
+      <label for="chemistry">chemistry</label>
+      <textarea id="chemistry" name="subject" placeholder="Write here today's targeted study of chemistry..." style="height:200px"></textarea>
+      
+      
+      
+      
+      <label for="TodayFor">chemistry study type</label>
+      <select id="Todayforche" name="country">
+        <option value="MCQ">MCQ</option>
+        <option value="learn/revise">Learn/revise</option>
+        <option value="Both">Both</option>
+      </select>
+      
+      <label for="appt">Time From</label>
+      <input type="time" id="timefromche" name="timefromche">
+      <label for="appt">time To</label>
+      <input type="time" id="timetoche" name="timetoche">
+     
+      
+      <!-- math details -->
+      
+      
+      <label for="math">Mathematics</label>
+      <textarea id="math" name="subject" placeholder="Write here today's targeted study of math..." style="height:200px"></textarea>
+      
+      
+      
+      <label for="TodayFor">Math study type</label>
+      <select id="Todayformath" name="country">
+        <option value="MCQ">MCQ</option>
+        <option value="learn/revise">Learn/revise</option>
+        <option value="Both">Both</option>
+      </select>
+      
+      <label for="appt">Time From</label>
+      <input type="time" id="timefrommath" name="timefrommath">
+      <label for="appt">time To</label>
+      <input type="time" id="timetomath" name="timetomath">
+     
+     <hr> <br>
+      <!-- reward -->
+      <label for="reward">Reward</label>
+      <input type="text" id="reward" name="reward" placeholder="Complete study get this..✨">
+   
+   
+    </form>
+    <!-- daitails of two button -->
+    <button class="btn" id="btn1" >Save This plan</button>
+    
+  </div>
+  
+  <div id="details">
+
+  </div>
+</div>
+</body>
+<script src="index.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
