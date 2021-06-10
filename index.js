@@ -8,7 +8,7 @@ let input = ['date', 'physics', 'Todayforphy', 'timefromphy', 'timetophy', 'chem
   ]
 //  console.log(input);
 addBtn.addEventListener("click", function(e) {
-  let all ='';
+  let all = '';
   for (var i = 0; i < input.length; i++) {
     inputid = input[i];
     let addTxt = document.getElementById(inputid);
@@ -18,44 +18,44 @@ addBtn.addEventListener("click", function(e) {
     } else {
       notesObj = JSON.parse(notes);
     }
-   if (i==0) {
-     all += " 📅 Date :- " + addTxt.value +'<br><br>'
-   } else if(i==1) {
-     all += '⚛️ your physics target is :- ' + addTxt.value +'<br><br>'
-   } else if(i==2) {
-     all += '🎴 What you doing in physics today:- ' + addTxt.value +'<br><br>'
-   }else if (i == 3) {
-     all += '⏳physics study from :- ' + addTxt.value + '<br><br>'
-   }else if (i == 4) {
-     all += '⌛ physics study To :- ' + addTxt.value + '<br><br>'
-   }else if(i==5) {
-     all += ' 👩‍🔬 your chemistry target is:- ' + addTxt.value +'<br><br>'
-   }else if (i == 6) {
-     all += '🔥 What you doing in chemistry today:- ' + addTxt.value + '<br><br>'
-   }else if (i == 7) {
-     all += '⏳chemistry study from :- ' + addTxt.value + '<br><br>'
-   }else if (i == 8) {
-     all += '⌛ chemistry study To :- ' + addTxt.value + '<br><br>'
-   }else if(i==9) {
-     all += '➕ your Math target is:- ' + addTxt.value +'<br><br>'
-   }else if (i == 10) {
-     all += '✨ What you doing in math today:- ' + addTxt.value + '<br><br>'
-   }else if (i == 11) {
-     all += '🕔 math study from :- ' + addTxt.value + '<br><br>'
-   }else if (i == 12) {
-     all += '🕕 math study To :- ' + addTxt.value + '<br><br>'
-   }else if (i == 13) {
-     all += '🍰 You will get this reward:- ' + addTxt.value + '<br><br>'
-   }
-   
+    if (i == 0) {
+      all += " 📅 Date :- " + addTxt.value + '<br><br>'
+    } else if (i == 1) {
+      all += '⚛️ your physics target is :- ' + addTxt.value + '<br><br>'
+    } else if (i == 2) {
+      all += '🎴 What you doing in physics today:- ' + addTxt.value + '<br><br>'
+    } else if (i == 3) {
+      all += '⏳physics study from :- ' + addTxt.value + '<br><br>'
+    } else if (i == 4) {
+      all += '⌛ physics study To :- ' + addTxt.value + '<br><br>'
+    } else if (i == 5) {
+      all += ' 👩‍🔬 your chemistry target is:- ' + addTxt.value + '<br><br>'
+    } else if (i == 6) {
+      all += '🔥 What you doing in chemistry today:- ' + addTxt.value + '<br><br>'
+    } else if (i == 7) {
+      all += '⏳chemistry study from :- ' + addTxt.value + '<br><br>'
+    } else if (i == 8) {
+      all += '⌛ chemistry study To :- ' + addTxt.value + '<br><br>'
+    } else if (i == 9) {
+      all += '➕ your Math target is:- ' + addTxt.value + '<br><br>'
+    } else if (i == 10) {
+      all += '✨ What you doing in math today:- ' + addTxt.value + '<br><br>'
+    } else if (i == 11) {
+      all += '🕔 math study from :- ' + addTxt.value + '<br><br>'
+    } else if (i == 12) {
+      all += '🕕 math study To :- ' + addTxt.value + '<br><br>'
+    } else if (i == 13) {
+      all += '🍰 You will get this reward:- ' + addTxt.value + '<br><br>'
+    }
+
     addTxt.value = '';
   }
-    
-    notesObj.push(all);
-    localStorage.setItem("notes", JSON.stringify(notesObj));
-    
-   // console.log(notesObj);
-  
+
+  notesObj.push(all);
+  localStorage.setItem("notes", JSON.stringify(notesObj));
+
+  // console.log(notesObj);
+
   showNotes();
 });
 
@@ -67,7 +67,7 @@ const showNotes = () => {
     notesObj = [];
   } else {
     notesObj = JSON.parse(notes);
-   // console.log(notesObj);
+    // console.log(notesObj);
   }
   let html = "";
   for (var i = 0; i < notesObj.length; i++) {
@@ -77,13 +77,16 @@ const showNotes = () => {
         <p id='text'class="p">${notesObj[i]}
         </p>
         <button id="${i}" onclick="deleteNote(this.id)" class="Del">Mark completed</button>
+       <button id="${i}" class="Del" onclick="save(this.id)"> Save For future </button>
           </div>     `;
   }
   let notesElm = document.getElementById("details");
+
   if (notesObj.length != 0) {
     notesElm.innerHTML = html;
   } else {
-    notesElm.innerHTML = `Nothing to show!`;
+    notesElm.innerHTML = `Nothing to show!! 
+    `;
   }
 }
 showNotes();
@@ -91,7 +94,7 @@ showNotes();
 
 // Function to delete a note
 function deleteNote(index) {
-//   console.log("I am deleting", index);
+  //   console.log("I am deleting", index);
 
   let notes = localStorage.getItem("notes");
   if (notes == null) {
@@ -106,3 +109,30 @@ function deleteNote(index) {
 }
 
 // console.log(document.getElementById("text").innerHTML);
+
+const save = (i) => {
+
+   // window.location.pathname = "save.html";
+   alert('plan successfully saved !     click \"view saved plans\" to see plans')
+  // console.log(notesObj[i]);
+  let nots = localStorage.getItem("notesave");
+  if (nots == null) {
+    Add = [];
+  } else {
+    Add = JSON.parse(nots);
+  }
+  //for (var i = 0; i < notesObj.length; i++) {
+    Add.push(notesObj[i]);
+  //}
+  
+  localStorage.setItem("notesave", JSON.stringify(Add));
+
+
+}
+const show = () => {
+  
+  window.location.pathname = "Study-planner/save.html";
+  
+  
+  
+}
