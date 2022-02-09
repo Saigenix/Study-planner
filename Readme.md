@@ -1,5 +1,8 @@
 /// Daily study plan maker ///
 
+✨🌈 Live demo ;:
+https://bit.ly/dailyStudyPlanner
+
 
 
 /// future updates :
