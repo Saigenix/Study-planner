@@ -3,7 +3,7 @@ console.log("Welcome to daily study planner app");
 // user details add into the local storage 
 
 let addBtn = document.getElementById('btn1')
-let input = ['date', 'physics', 'Todayforphy', 'timefromphy', 'timetophy', 'chemistry', 'Todayforche', 'timefromche', 'timetoche', 'math', 'Todayformath', 'timefrommath'
+let input = ['date', 'subname1','physics','Todayforphy','timefromphy', 'timetophy', 'subname2', 'chemistry', 'Todayforche', 'timefromche', 'timetoche', 'subname2', 'math', 'Todayformath', 'timefrommath'
   , 'timetomath', 'reward'
   ]
 //  console.log(input);
@@ -21,30 +21,36 @@ addBtn.addEventListener("click", function(e) {
     if (i == 0) {
       all += " 📅 Date :- " + addTxt.value + '<br><br>'
     } else if (i == 1) {
-      all += '⚛️ your physics target is :- ' + addTxt.value + '<br><br>'
+      all += `Subject Name : ${addTxt.value}` + '<br><br>'
     } else if (i == 2) {
-      all += '🎴 What you doing in physics today:- ' + addTxt.value + '<br><br>'
+      all += `⚛️ Topics of Study :- ` + addTxt.value + '<br><br>'
     } else if (i == 3) {
-      all += '⏳physics study from :- ' + addTxt.value + '<br><br>'
+      all +=  '🎴 Type of Study:- ' + addTxt.value + '<br><br>'
     } else if (i == 4) {
-      all += '⌛ physics study To :- ' + addTxt.value + '<br><br>'
+      all += '⏳Study from :- ' + addTxt.value + '<br><br>'
     } else if (i == 5) {
-      all += ' 👩‍🔬 your chemistry target is:- ' + addTxt.value + '<br><br>'
+      all += '⏳Study to :- ' + addTxt.value + '<br><br>'
     } else if (i == 6) {
-      all += '🔥 What you doing in chemistry today:- ' + addTxt.value + '<br><br>'
+      all += `Subject Name : ${addTxt.value}` + '<br><br>'
     } else if (i == 7) {
-      all += '⏳chemistry study from :- ' + addTxt.value + '<br><br>'
+      all += `⚛️ Topics of Study :- ` + addTxt.value + '<br><br>'
     } else if (i == 8) {
-      all += '⌛ chemistry study To :- ' + addTxt.value + '<br><br>'
+      all += '🎴 Type of Study:- ' + addTxt.value + '<br><br>'
     } else if (i == 9) {
-      all += '➕ your Math target is:- ' + addTxt.value + '<br><br>'
+      all += '⏳Study from :- ' + addTxt.value + '<br><br>'
     } else if (i == 10) {
-      all += '✨ What you doing in math today:- ' + addTxt.value + '<br><br>'
+      all += '⏳Study to :- ' + addTxt.value + '<br><br>'
     } else if (i == 11) {
-      all += '🕔 math study from :- ' + addTxt.value + '<br><br>'
+      all += `Subject Name : ${addTxt.value}` + '<br><br>'
     } else if (i == 12) {
-      all += '🕕 math study To :- ' + addTxt.value + '<br><br>'
+      all += `⚛️ Topics of Study :- ` + addTxt.value + '<br><br>'
     } else if (i == 13) {
+      all += '🎴 Type of Study:- ' + addTxt.value + '<br><br>'
+    } else if (i == 14) {
+      all += '⏳Study from :- ' + addTxt.value + '<br><br>'
+    } else if (i == 15) {
+      all += '⏳Study to :- ' + addTxt.value + '<br><br>'
+    } else if (i == 16) {
       all += '🍰 You will get this reward:- ' + addTxt.value + '<br><br>'
     }
 
@@ -54,7 +60,7 @@ addBtn.addEventListener("click", function(e) {
   notesObj.push(all);
   localStorage.setItem("notes", JSON.stringify(notesObj));
 
-  // console.log(notesObj);
+  console.log(notesObj);
 
   showNotes();
 });
@@ -67,7 +73,7 @@ const showNotes = () => {
     notesObj = [];
   } else {
     notesObj = JSON.parse(notes);
-    // console.log(notesObj);
+    console.log(notesObj);
   }
   let html = "";
   for (var i = 0; i < notesObj.length; i++) {
