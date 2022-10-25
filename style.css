@@ -25,18 +25,30 @@ body{
   place-items: center;
  }
  
- 
  .button {
-  background-color: #FF0000;
-  color: white;
-  border: none;
-  padding: 5px 5px;
-  margin: 20px 70px;
-  text-align: center;
-  display: inline-block;
-  font-size: 20px;
- 
-  cursor: pointer;
-  font-family: 'Ubuntu', sans-serif;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: #4CAF50;
+ border: none;
+ color: white;
+ padding: 8px 8px;
+ margin: 20px 70px;
+ text-align: center;
+ display: inline-block;
+ font-size: 20px;
+text-decoration: none;
+ display: inline-block;
+ cursor: pointer;
 }
+.button:hover{
+  background-color: red;
+ border: none;
+ color: white;
+ padding: 8px 8px;
+ margin: 20px 70px;
+ text-align: center;
+ display: inline-block;
+ font-size: 20px;
+text-decoration: none;
+ display: inline-block;
+ cursor: pointer;
+}
+
