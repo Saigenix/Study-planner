@@ -138,6 +138,8 @@ const save = (i) => {
 const show = () => {
   
   window.location.pathname = "Study-planner/save.html";
+  // use this in local machine
+  //window.location.pathname = "/save.html";
   
   
   
