@@ -26,7 +26,11 @@ const showNotes = (e) => {
 }
 showNotes();
 
+const go = () => {
 
+    window.location.pathname = "Study-planner/Form.html";
+
+  }
 // to search function
 
 let search = document.getElementById('searchTxt');
