@@ -111,14 +111,14 @@ const showPlan = () => {
   notesObj.map((note, index) => {
     html += `
     <div class="card">
-      <h2 class="head">plan ${index+1} </h2>
+      <h2 class="head"> 📓 plan ${index+1} </h2>
       <hr />
-      <p id='text'class="p">${note}</p>
+      <p id='text'class="p"> 🧾 ${note}</p>
       <button id="${index}" onclick="markAsDone(this.id)" class="Del">
-        Mark completed
+        Mark completed ✅
       </button>
       <button id="${index}" class="Del" onclick="saveForFuture(this.id)">
-        Save For future
+        Save For future ❕
       </button>
     </div>`;
   })
