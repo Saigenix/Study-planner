@@ -25,14 +25,6 @@ const showNotes = (e) => {
   }
 }
 showNotes();
-
-const go = () => {
-
-    window.location.pathname = "Study-planner/Form.html";
-   // use this in local machine
-    //window.location.pathname = "/Form.html";
-
-  }
 // to search function
 
 let search = document.getElementById('searchTxt');
