@@ -13,10 +13,5 @@ https://bit.ly/dailyStudyPlanner
 5. share plan function
 6. copy plan function
 7. customize other options 
-<<<<<<< HEAD
 ---
 Refer to CONTRIBUTOR.md to know how to contribute
-=======
-
-@saigenix
->>>>>>> 8f7e49b5bb8bf2bae8d3521c02f0aad648d38f64
