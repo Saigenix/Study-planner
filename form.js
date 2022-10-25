@@ -11,7 +11,7 @@ const createSection = (sectionName) => {
   const html = `
     <button
       id="delete-section"
-      onclick="deleteSection(event, ${sectionName})"
+      onclick="deleteSection(event, '${sectionName}')"
     >
       Delete Section
     </button>
@@ -46,9 +46,9 @@ const createSection = (sectionName) => {
 }
 
 // Delete Section
-const deleteSection = (e, section) => {
-  if (e) e.preventDefault();
-  const subjectName = section.classList[0];
+const deleteSection = (e, subjectName) => {
+  e.preventDefault();
+  const section = document.getElementById("insert-sections").getElementsByClassName(subjectName)[0];
   document.getElementById('insert-sections').removeChild(section);
   sectionsList = sectionsList.filter(section => section !== subjectName);
 }
@@ -81,7 +81,7 @@ const savePlan = () => {
     })
 
     // Delete section once values are added
-    deleteSection(event, subject);
+    deleteSection(event, section);
   })
   
   response += `reward: ${reward} <br>`;
@@ -157,11 +157,6 @@ const saveForFuture = (id) => {
   allNotes = JSON.parse(allNotes);
   savedNotes.push(allNotes[id]);
   localStorage.setItem("notesave", JSON.stringify(savedNotes));
-}
-
-// Show Saved Notes
-const show = () =>  {
-  window.location.pathname = "Study-planner/save.html";
 }
 
 // Event Listeners ---
