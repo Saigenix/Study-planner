@@ -14,17 +14,18 @@
   input[type=time], input[type=date], input[type=text], select, textarea {
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */ 
+  box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.2);
   border: 1px solid #ccc; /* Gray border */
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
-   resize: vertical/* Allow the user to vertically resize the textarea (not horizontally) */
+  resize: vertical/* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 
 .btn{
-    background-color:  rgba(45, 235, 20, 0.762);
+  background-color:  rgba(45, 235, 20, 0.762);
   color: white;
   padding: 12px 20px;
   margin-top: 10px;
@@ -32,19 +33,15 @@
   border-radius: 4px;
   cursor: pointer;
   font-family: 'Ubuntu', sans-serif;
-  
-  
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
 .btn:hover{
   background-color: #FF7453;
-box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-  
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 #btncolor{
-  
   background-color: #FF7453;
-  
 }
 /* Add a background color and some padding around the form */
 .container {
@@ -56,13 +53,11 @@ box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 
 }
 
 #details{
-  
   border: 2px solid #54576F;
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  
 }
 .card{
   display: grid;
@@ -74,7 +69,6 @@ box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 
   }
 
 .Del{
-  
   background-color: #0BF2FF;
   color: white;
   padding: 12px 20px;
@@ -83,15 +77,13 @@ box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 
   border-radius: 4px;
   cursor: pointer;
   font-family: 'Ubuntu', sans-serif;
-  
-  
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  margin-left: 10px;
 }
 
 .Del:hover{
-  
   background-color: #FF7453;
-box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-  
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .head{
@@ -101,11 +93,8 @@ box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 
   font-family: 'Ubuntu', sans-serif;
 }
 .p{
-  
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
-  
-  
 }
 .nav {
   height: 50px;
@@ -150,6 +139,12 @@ box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 
   display: none;
 }
 
+#generate-sections{
+  background-color: lime;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
 .section-generator {
   margin: 20px 0;
   display: flex;
