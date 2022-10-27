@@ -1,6 +1,6 @@
 # Daily study plan maker
 
-✨🌈 [Live demo](https://bit.ly/dailyStudyPlanner)
+✨[Live demo](https://bit.ly/dailyStudyPlanner)
 
 
 
@@ -13,4 +13,4 @@
 - customize other options 
 
 ---
--- Refer to CONTRIBUTOR.md to know how to contribute
+- Refer to CONTRIBUTOR.md to know how to contribute
