@@ -13,4 +13,4 @@
 - customize other options 
 
 ---
-> Refer to CONTRIBUTOR.md to know how to contribute
+-- Refer to CONTRIBUTOR.md to know how to contribute
