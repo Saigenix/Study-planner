@@ -1,4 +1,4 @@
-// All common methods come here
+// All common methods come here 
 
 const navigate = (page) => {
     const href = window.location.href.split('/');
